@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSpace | მთავარი</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Agro<span>Space</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <nav><ul class="nav-links">
+            <li><a href="index.html" class="active">მთავარი</a></li>
+            <li><a href="shop.html">მაღაზია</a></li>
+            <li><a href="rent.html">გაქირავება</a></li>
+            <li><a href="consulting.html">კონსულტაცია</a></li>
+            <li><a href="forum.html">ფორუმი</a></li>
+            <li><a href="ai.html">AgroAI</a></li>
+            <li><a href="dashboard.html">კაბინეტი</a></li>
+        </ul></nav>
+    </header>
+
+    <div class="main-container" style="display:flex; align-items:center; justify-content:center;">
+        <div class="glass-panel hero-split" style="display:flex; gap:50px; width:100%; max-width:1200px;">
+            <div style="flex:1;">
+                <h1 style="font-size:3rem; margin-bottom:20px;">მოგესალმებათ <br> <span style="color:var(--accent)">AgroSpace</span></h1>
+                <p style="font-size:1.1rem; line-height:1.6; margin-bottom:30px;">
+                    ერთიანი ციფრული ეკოსისტემა ფერმერებისა და მომხმარებლებისთვის, სადაც შეგიძლია გაყიდო შენი პროდუქცია შუამავლების გარეშე, 
+                    იქირაო სასოფლო-სამეურნეო ტექნიკა და სერვისები, მიიღო ჭკვიანი რეკომენდაციები აგრონომიულ და ფინანსურ საკითხებზე, ჩაერთო 
+                    ფერმერთა ფორუმებში, გაეცნო ქართულ და საერთაშორისო აგრო ტენდენციებს
+                     და მიიღო პროფესიონალური კონსულტაცია შენი აგრო ბიზნესისთვის.
+                    AgroSpace ამარტივებს პროცესებს და გაძლევს რეალურ ინსტრუმენტებს შედეგის მისაღწევად.
+                </p>
+                <a href="shop.html" class="btn btn-primary"><i class="fas fa-shopping-basket"></i> მაღაზია</a>
+            </div>
+
+            <div style="flex:1; background:rgba(255,255,255,0.1); padding:25px; border-radius:15px;">
+                <h2 style="text-align:center; margin-bottom:20px;">რეგისტრაცია</h2>
+                <div style="display:flex; gap:10px; margin-bottom:20px;">
+                    <button id="btn-user" class="btn btn-primary" style="flex:1;" onclick="switchTab('user')">მომხმარებელი</button>
+                    <button id="btn-farmer" class="btn btn-outline" style="flex:1;" onclick="switchTab('farmer')">ფერმერი</button>
+                </div>
+                <form id="regForm">
+                    <input type="text" placeholder="სახელი" required>
+                    <input type="text" placeholder="გვარი" required>
+                    <input type="text" placeholder="პირადი ნომერი" required>
+                    <input type="date" required>
+                    <input type="email" id="email" placeholder="ელ-ფოსტა" required>
+                    <input type="tel" id="phone" placeholder="ტელეფონი (+995...)" required>
+                    <div id="farmer-field" style="display:none;">
+                        <textarea placeholder="რა ბიზნესს აწარმოებთ?"></textarea>
+                    </div>
+                    <div style="position:relative;">
+                        <input type="password" id="pass" placeholder="პაროლი" required>
+                        <i class="fas fa-eye" style="position:absolute; right:10px; top:20px; color:#333; cursor:pointer;" onclick="togglePass()"></i>
+                    </div>
+                    <button class="btn btn-primary" style="width:100%; margin-top:15px;">დარეგისტრირება</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookieBanner"><p>საიტი იყენებს Cookies.</p><button class="btn btn-primary" onclick="acceptCookies()">თანახმა ვარ</button></div>
+    
+    <footer>
+        <div><h4>AgroSpace</h4><p>თქვენი აგრო პარტნიორი.</p></div>
+        <div><h4>კონტაქტი</h4><ul><li>info@agrospace.ge</li><li>+995 555 00 00 00</li></ul></div>
+        <div><h4>ჯგუფის წევრები</h4><ul><li>ქეთევან თეთრაძე, ნიკოლოზ ავეტისოვი</li><li>ცისი მაისურაძე, თიკო გომშიაშვილი</li></ul></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

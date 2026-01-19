@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroSpace | გაქირავება</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Agro<span>Space</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <nav><ul class="nav-links">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="shop.html">მაღაზია</a></li>
+            <li><a href="rent.html" class="active">გაქირავება</a></li>
+            <li><a href="consulting.html">კონსულტაცია</a></li>
+            <li><a href="forum.html">ფორუმი</a></li>
+            <li><a href="ai.html">AgroAI</a></li>
+            <li><a href="dashboard.html">კაბინეტი</a></li>
+        </ul></nav>
+    </header>
+
+    <div class="main-container">
+        <h1 class="page-title">ტექნიკის გაქირავება</h1>
+        
+        <div class="glass-panel" style="margin-bottom:30px; display:flex; gap:20px; flex-wrap:wrap; align-items:flex-end;">
+            <div style="flex:1;">
+                <label>თარიღი</label><input type="date">
+            </div>
+            <div style="flex:1;">
+                <label>ტიპი</label>
+                <select id="r-type" onchange="filterRent()">
+                    <option value="all">ყველა</option>
+                    <option value="tractor">ტრაქტორი</option>
+                    <option value="drone">დრონი</option>
+                    <option value="harvester">კომბაინი</option>
+                    <option value="other">სხვა</option>
+                </select>
+            </div>
+            <div style="flex:1;">
+                <label>რეგიონი</label>
+                <select id="r-reg" onchange="filterRent()">
+                    <option value="all">ყველა</option>
+                    <option value="kakheti">კახეთი</option>
+                    <option value="imereti">იმერეთი</option>
+                    <option value="kartli">ქართლი</option>
+                    <option value="adjara">აჭარა</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="rent-grid" class="grid-area" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));"></div>
+    </div>
+    
+    <footer><div><h4>AgroSpace</h4></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

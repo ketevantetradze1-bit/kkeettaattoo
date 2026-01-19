@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSpace | მაღაზია</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Agro<span>Space</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <nav><ul class="nav-links">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="shop.html" class="active">მაღაზია</a></li>
+            <li><a href="rent.html">გაქირავება</a></li>
+            <li><a href="consulting.html">კონსულტაცია</a></li>
+            <li><a href="forum.html">ფორუმი</a></li>
+            <li><a href="ai.html">AgroAI</a></li>
+            <li><a href="dashboard.html">კაბინეტი</a></li>
+        </ul></nav>
+        <div class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></div>
+    </header>
+
+    <div class="main-container">
+        <h1 class="page-title">აგრო ბაზარი</h1>
+        <div class="glass-panel content-wrapper">
+            <aside class="sidebar">
+                <h3>ფილტრაცია</h3>
+                <div class="form-group"><label>კატეგორია</label>
+                    <select id="cat" onchange="filterShop()">
+                        <option value="all">ყველა</option>
+                        <option value="vegetable">ბოსტნეული</option>
+                        <option value="fruit">ხილი</option>
+                        <option value="dairy">რძის ნაწარმი</option>
+                        <option value="other">სხვა</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>რეგიონი</label>
+                    <select id="reg" onchange="filterShop()">
+                        <option value="all">ყველა</option>
+                        <option value="kakheti">კახეთი</option>
+                        <option value="imereti">იმერეთი</option>
+                        <option value="kartli">ქართლი</option>
+                        <option value="adjara">აჭარა</option>
+                        <option value="samegrelo">სამეგრელო</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>მაქს. ფასი: <span id="price-val">50</span>₾</label>
+                    <input type="range" id="price" min="1" max="50" value="50" oninput="filterShop()">
+                </div>
+            </aside>
+            <div id="products-grid" class="grid-area"></div>
+        </div>
+    </div>
+
+    <div id="scrollTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+    <footer>
+        <div><h4>AgroSpace</h4><p>თქვენი აგრო პარტნიორი.</p></div>
+        <div><h4>კონტაქტი</h4><ul><li>info@agrospace.ge</li></ul></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
